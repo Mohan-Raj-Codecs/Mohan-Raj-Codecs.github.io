@@ -1,0 +1,13 @@
+I forgot to mention one thing.  Make sure to use ur username as the repo name. It should be
+Yourusername.github.io
+
+And anyone who is having a 404 error do this
+
+404 means that the file could not be found. To solve this make sure the mainpage is named as index.html and also check if the index.html file is in the root directory and not in any sub folder. 
+
+So if u have only one project in ur repo then make sure that the index file is in
+yourusername.github.io and not in
+yourusername.github.io/subfolder
+
+If u have multiple projects in ur repo then access it by adding the subfolder name in the URL along with the repo name, like this
+https://yourusername.github.io/subfolder
