@@ -23,5 +23,4 @@ function resizer(){
     document.body.style.backgroundImage="url('cons.jpg')";
     }
 }
-
 resizer();
