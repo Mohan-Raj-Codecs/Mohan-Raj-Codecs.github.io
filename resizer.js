@@ -23,3 +23,5 @@ function resizer(){
     document.body.style="background-image:url(cons.jpg);";
     }
 }
+
+resizer();
