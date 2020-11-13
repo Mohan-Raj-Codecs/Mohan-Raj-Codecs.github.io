@@ -37,21 +37,12 @@ function Headp(){
     headr.innerHTML="Mohan";
 }
 function CallT(){
-    document.getElementById("mohan").innerHTML="Hoping To Help Me ?";
-    document.getElementById("moh").innerHTML="Text me If You are Interested : 9962610313";
+    document.getElementById("JoinHand").innerHTML="Hoping To Help Me ?";
+    document.getElementById("Empty").innerHTML="Text me If You are Interested : 9962610313";
 
 }
 function CallD(){
-    var elem = document.getElementById("mohan");
-    document.getElementById("moh").innerHTML="";
+    var elem = document.getElementById("JoinHand");
+    document.getElementById("Empty").innerHTML="";
     elem.innerHTML="Join Your Hand Here";
-}
-function resizer(){
-    if(screen.width<400){
-    document.body.style="background-image:url(cons(320).jpg);";
-    }else if(screen.width<520 && screen.width>400){
-    document.body.style="background-image:url(cons(480).jpg);";
-    }else
-    document.body.style="background-image:url(cons.jpg);";
-    
 }
