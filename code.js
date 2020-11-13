@@ -45,4 +45,5 @@ function CallD(){
     var elem = document.getElementById("JoinHand");
     document.getElementById("Empty").innerHTML="";
     elem.innerHTML="Join Your Hand Here";
+
 }
