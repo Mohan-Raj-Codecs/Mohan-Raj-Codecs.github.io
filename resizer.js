@@ -11,7 +11,7 @@ function resizer(){
     Since.style.fontSize="7.8px";
     Mohan.style.fontSize="7.8px";
     NeedHand.style.fontSize="12.8px";
-    JoinHand.style.fontSize="15px";
+    JoinHand.style.fontSize="20px";
     }else if(screen.width<520 && screen.width>400){ //Tablet Mode
     document.body.style.backgroundImage="url('cons(480).jpg')";
     UnderConst.style.fontSize="54px";
