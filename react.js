@@ -57,9 +57,27 @@ function Rand_str(max){
   }
   return cha;
 }
-function Navi_Anime(){
-  var navi=document.getElementById("smart-scroll")
-  navi.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"
+function Navbar_Colors(){
+  var nav_bar=document.getElementById("smart-scroll");  //Fetching Navbar
+  var home=document.getElementById("smart-scroll");
+  var moviesda=document.getElementById("smart-scroll");
+  var support=document.getElementById("smart-scroll");
+  var aboutus=document.getElementById("smart-scroll");
+
+  moviesda.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"});
+  support.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-warning fixed-top"});
+  aboutus.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-danger fixed-top"});
+  
+  moviesda.addEventListener("mouseout",nav_default);
+  support.addEventListener("mouseout",nav_default);
+  aboutus.addEventListener("mouseout",nav_default);
+
+  function nav_default(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top"}
+}
+function navi(){
+  nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top";  //Fetching Navbar
 }
 
+
+//Navbar_Colors();
 smart_scroll();
