@@ -16,7 +16,7 @@
 
 
 .smart-scroll{
-    transition: top 0.4s;
+    transition: background-color 0.5s,top 0.4s;
 }
 /* Icons Config */
 .fa {
@@ -136,7 +136,3 @@
   animation-iteration-count: infinite;
 }
 /*Support */
-
-#support:hover{
-  text-c
-}
