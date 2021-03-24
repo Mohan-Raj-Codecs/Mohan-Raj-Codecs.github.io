@@ -57,27 +57,31 @@ function Rand_str(max){
   }
   return cha;
 }
+function noti(){
+  var Tes = document.getElementById("Test");
+  Tes.innerHTML=Rand_str(Rand_num(14,15));
+  //setTimeout(Random_String);
+}
+
 function Navbar_Colors(){
   var nav_bar=document.getElementById("smart-scroll");  //Fetching Navbar
-  var home=document.getElementById("smart-scroll");
-  var moviesda=document.getElementById("smart-scroll");
-  var support=document.getElementById("smart-scroll");
-  var aboutus=document.getElementById("smart-scroll");
+  var home=document.getElementById("home");
+  var moviesda=document.getElementById("moviesda");
+  var support=document.getElementById("support");
+  var aboutus=document.getElementById("aboutus");
 
-  moviesda.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"});
-  support.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-warning fixed-top"});
+  home.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-success fixed-top"});
+  moviesda.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-warning fixed-top"});
+  support.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"});
   aboutus.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-danger fixed-top"});
   
+  home.addEventListener("mouseout",nav_default);
   moviesda.addEventListener("mouseout",nav_default);
   support.addEventListener("mouseout",nav_default);
   aboutus.addEventListener("mouseout",nav_default);
 
   function nav_default(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top"}
 }
-function navi(){
-  nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top";  //Fetching Navbar
-}
 
-
-//Navbar_Colors();
+Navbar_Colors();
 smart_scroll();
