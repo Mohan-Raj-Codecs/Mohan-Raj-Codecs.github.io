@@ -57,10 +57,9 @@ function Rand_str(max){
   }
   return cha;
 }
-function noti(){
-  var Tes = document.getElementById("Test");
-  Tes.innerHTML=Rand_str(Rand_num(14,15));
-  //setTimeout(Random_String);
+function Navi_Anime(){
+  var navi=document.getElementById("smart-scroll")
+  navi.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"
 }
 
 smart_scroll();
