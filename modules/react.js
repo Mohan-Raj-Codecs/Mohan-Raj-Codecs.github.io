@@ -63,4 +63,25 @@ function noti(){
   //setTimeout(Random_String);
 }
 
+function Navbar_Colors(){
+  var nav_bar=document.getElementById("smart-scroll");  //Fetching Navbar
+  var home=document.getElementById("home");
+  var moviesda=document.getElementById("moviesda");
+  var support=document.getElementById("support");
+  var aboutus=document.getElementById("aboutus");
+
+  home.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-success fixed-top"});
+  moviesda.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-warning fixed-top"});
+  support.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-primary fixed-top"});
+  aboutus.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-danger fixed-top"});
+  
+  home.addEventListener("mouseout",nav_default);
+  moviesda.addEventListener("mouseout",nav_default);
+  support.addEventListener("mouseout",nav_default);
+  aboutus.addEventListener("mouseout",nav_default);
+
+  function nav_default(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top"}
+}
+
+Navbar_Colors();
 smart_scroll();
