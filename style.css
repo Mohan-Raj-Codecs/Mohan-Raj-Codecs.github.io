@@ -14,7 +14,6 @@
 }
 /* Animations  */
 
-
 .smart-scroll{
     transition: background-color 0.5s,top 0.4s;
 }
@@ -113,8 +112,8 @@
   animation-duration: 3s;
   animation-iteration-count: infinite;
 }
-#navname:hover{
-  color: #1bbe23;
+#navname{
+  transition: color 1s;
 }
 .cline{
   position: relative; 
@@ -136,3 +135,5 @@
   animation-iteration-count: infinite;
 }
 /*Support */
+
+
