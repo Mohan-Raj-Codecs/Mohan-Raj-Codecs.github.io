@@ -101,7 +101,7 @@ function Hashed(ide,color,limit=20,speed=30){
     var looper1 = setInterval(function(){
       
       document.getElementById(ide).innerHTML=Rand_Str(temp_len);
-
+      entered=false;
       if(counter>limit){ 
         clearInterval(looper1);
         document.getElementById(ide).innerHTML=old;
@@ -111,7 +111,7 @@ function Hashed(ide,color,limit=20,speed=30){
           }
           Rand=Rand+Rand_Str(len);
           document.getElementById(ide).innerHTML=Rand;
-    
+      
           if(len<0){ 
             clearInterval(looper2);
             document.getElementById(ide).innerHTML=old;
@@ -133,8 +133,8 @@ function Hashed(ide,color,limit=20,speed=30){
 }
 function navname(){
   entered=true;
-  var navnam=document.getElementById('navname');
-  navnam.addEventListener("mouseenter",function(){ 
+  var element=document.getElementById('navname');
+  element.addEventListener("mouseenter",function(){ 
                                                 if(entered==true){
                                                   Hashed("navname",'rgb(43, 255, 0)');
                                                   entered=false;
