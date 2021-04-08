@@ -32,13 +32,15 @@ function footer_error(ele){
 
 }
 
-function Rand_num(min,max){
-  function Rand(){
-    var rand = Math.floor((Math.random() * 1000) + 0);
-    if(rand==32)
-        rand=30;
-    return rand;
-  }
+function Rand_Str(max){
+  
+  function Rand_num(min,max){
+    function Rand(){
+      var rand = Math.floor((Math.random() * 1000) + 0);
+      if(rand==32)
+          rand=30;
+      return rand;
+    }
     var Rand=Rand();
     if(Rand<min){
       Rand=Rand_num(min,max);
@@ -47,22 +49,22 @@ function Rand_num(min,max){
       Rand=Rand_num(min,max);
     }
     return Rand;
-}
-
-function Rand_str(max){
+  }
+  
   var i;
   var cha="";
   for(i=0;i<=max;i++){
     cha+=String.fromCharCode(Rand_num(1,126));
   }
   return cha;
-}
-function noti(){
-  var Tes = document.getElementById("Test");
-  Tes.innerHTML=Rand_str(Rand_num(14,15));
-  //setTimeout(Random_String);
+
 }
 
+
+function noti(){
+  console.log(Rand_str(10));
+  //setTimeout(Random_String);
+}
 function Navbar_Colors(){
   var nav_bar=document.getElementById("smart-scroll");  //Fetching Navbar
   var home=document.getElementById("home");
@@ -83,5 +85,66 @@ function Navbar_Colors(){
   function nav_default(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top"}
 }
 
+function Hashed(ide,color,limit=20,speed=30){
+
+    var counter=0;
+    var old=document.getElementById(ide).innerHTML;
+    var len=old.length;
+    var temp_len=len;
+    var Rand="";
+    if(color=='None'){ color=document.getElementById(ide).style.color; }
+    temp_color=document.getElementById(ide).style.color;
+
+    console.log(color);
+    document.getElementById(ide).style.color=color;
+
+    var looper1 = setInterval(function(){
+      
+      document.getElementById(ide).innerHTML=Rand_Str(temp_len);
+
+      if(counter>limit){ 
+        clearInterval(looper1);
+        document.getElementById(ide).innerHTML=old;
+        var looper2 = setInterval(function(){
+          for(var i=0;i<(temp_len-len);i++){
+            Rand=Rand+old.charAt(i);
+          }
+          Rand=Rand+Rand_Str(len);
+          document.getElementById(ide).innerHTML=Rand;
+    
+          if(len<0){ 
+            clearInterval(looper2);
+            document.getElementById(ide).innerHTML=old;
+            entered=true;
+            document.getElementById(ide).style.color=temp_color;
+          }
+    
+          len--;
+          Rand='';
+          
+        },speed+20);
+
+      }
+      counter++;
+      
+    },speed);
+
+    
+}
+function navname(){
+  entered=true;
+  var navnam=document.getElementById('navname');
+  navnam.addEventListener("mouseenter",function(){ 
+                                                if(entered==true){
+                                                  Hashed("navname",'rgb(43, 255, 0)');
+                                                  entered=false;
+                                                }
+
+  });
+
+}
+
+navname();
+Hashed('navname','rgb(43, 255, 0)');
 Navbar_Colors();
 smart_scroll();
