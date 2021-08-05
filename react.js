@@ -95,7 +95,6 @@ function Hashed(ide,color,limit=20,speed=30){
     if(color=='None'){ color=document.getElementById(ide).style.color; }
     temp_color=document.getElementById(ide).style.color;
 
-    console.log(color);
     document.getElementById(ide).style.color=color;
 
     var looper1 = setInterval(function(){
@@ -129,7 +128,6 @@ function Hashed(ide,color,limit=20,speed=30){
       
     },speed);
 
-    
 }
 function navname(){
   entered=true;
@@ -143,8 +141,24 @@ function navname(){
   });
 
 }
+function logo(){
+  logos=document.getElementById('logo');
+  photo=["logo/b_m.jpg","logo/g_m.jpg","logo/r_m.jpg","logo/y_m.jpg"];
+  ct=0;
+  console.log(ct);
+  console.log(logos);
+  logo_loop = setInterval(function(){
+    if(ct>3){
+       ct=0;
+    }
+    logos.src=photo[ct];
+    ct=ct+1;
+  },2500);
+
+}
 
 navname();
 Hashed('navname','rgb(43, 255, 0)');
 Navbar_Colors();
 smart_scroll();
+logo();
