@@ -13,7 +13,9 @@
   100%{color: aqua;}
 }
 /* Animations  */
-
+#logo{
+  transition : all 1s ease-in-out;
+}
 .smart-scroll{
     transition: background-color 0.5s,top 0.4s;
 }
