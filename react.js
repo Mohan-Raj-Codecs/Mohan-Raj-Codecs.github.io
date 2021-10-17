@@ -71,6 +71,7 @@ function Navbar_Colors(){
   var moviesda=document.getElementById("moviesda");
   var support=document.getElementById("support");
   var aboutus=document.getElementById("aboutus");
+  var nav_def=nav_bar.className;
 
   home.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-success fixed-top"});
   moviesda.addEventListener("mouseover",function(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-warning fixed-top"});
@@ -82,7 +83,7 @@ function Navbar_Colors(){
   support.addEventListener("mouseout",nav_default);
   aboutus.addEventListener("mouseout",nav_default);
 
-  function nav_default(){nav_bar.className="navbar smart-scroll navbar-expand-lg navbar-dark bg-dark fixed-top"}
+  function nav_default(){nav_bar.className=nav_def}
 }
 
 function Hashed(ide,color,limit=20,speed=30){
