@@ -94,7 +94,7 @@ function Hashed(ide,color,limit=20,speed=30){
     var temp_len=len;
     var Rand="";
     if(color=='None'){ color=document.getElementById(ide).style.color; }
-    temp_color=document.getElementById(ide).style.color;
+    def_color=document.getElementById(ide).style.color;
 
     console.log(color);
     document.getElementById(ide).style.color=color;
@@ -117,7 +117,7 @@ function Hashed(ide,color,limit=20,speed=30){
             clearInterval(looper2);
             document.getElementById(ide).innerHTML=old;
             entered=true;
-            document.getElementById(ide).style.color=temp_color;
+            document.getElementById(ide).style.color=def_color;
           }
     
           len--;
