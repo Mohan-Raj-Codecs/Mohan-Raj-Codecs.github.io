@@ -22,7 +22,7 @@ function footer_error(ele){
   if(ele=="facebook fake")
     diserror("I didn't yet Created a Facebook Account 😳");
   else if(ele=="instagram fake")
-    diserror("I deleted it before 1.5 Year 😅");
+    diserror("I deleted it before 2.5 Year 😅");
   else if(ele=="twitter fake")
     diserror("I didn't know How to use Twitter 😶");
   else if(ele=="youtube fake")
