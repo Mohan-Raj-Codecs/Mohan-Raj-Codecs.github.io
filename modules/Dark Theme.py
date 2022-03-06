@@ -2,6 +2,7 @@ import time
 import subprocess as sub
 import os, sys
 from os.path import expanduser
+#Add Default theme write ,bring edit with idle,add this pc shortvut
 theme='''
 
 [Nippy Dark]
